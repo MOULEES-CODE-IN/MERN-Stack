@@ -1,48 +1,110 @@
-# Placement Management System (MERN)
 
-College placement portal with three roles: **Student**, **Company** and **Admin (Placement Officer)**.
+# 💼 Placement Management System
 
-## Run it
+### 🚀 A Smart Placement Portal Built with MERN Stack
 
-Needs Node.js 18+ and your MongoDB Atlas connection string in `server/.env`.
+A web application designed to simplify campus placements by connecting students, companies, and administrators through one centralized platform.
 
+<p align="center">
+
+  **🎓 STUDENTS &nbsp; • &nbsp; 🏢 COMPANIES &nbsp; • &nbsp; 🛡️ ADMIN**
+
+</p>
+
+---
+
+## 🗺️ Project Roadmap
+
+```text
+Student / Company / Admin
+            │
+            ▼
+     Register & Login
+            │
+            ▼
+     React Frontend
+            │
+            ▼
+   Node.js + Express API
+            │
+            ▼
+     MongoDB Database
+            │
+            ▼
+  Placement Management
+            │
+            ▼
+ Apply → Review → Selection
+```
+
+## ✨ Key Features
+
+| Module | Features |
+|---|---|
+| 🎓 Student | Dashboard, profile, search drives, apply for jobs |
+| 🏢 Company | Company profile, create drives, manage applicants |
+| 🛡️ Admin | Dashboard, user management, drive management |
+| 🔐 Security | JWT authentication, bcrypt password hashing |
+| 📊 Tracking | Application status and dashboard statistics |
+
+## 🛠️ Tech Stack
+
+<p>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+</p>
+
+## 🔄 How It Works
+
+1. Students register and complete their profiles.
+2. Companies create placement drives with eligibility criteria.
+3. Students browse available drives and submit applications.
+4. Companies review applications and update selection status.
+5. Students track their application progress.
+6. Admin manages users and placement activities.
+
+## 👨‍💻 Project Team
+
+| S.No. | Team Member | Contribution |
+|---|---|---|
+| 1 | **Chandramouleeswaran M** | Frontend & Integration |
+| 2 | **Arun k** | Backend & Database |
+| 3 | **Pugalan T R** | Testing & Documentation |
+
+> Replace the teammate placeholders with their real names and adjust contributions to match the work each person did.
+
+## 🎯 Project Objective
+
+To make campus placement activities more organized, transparent, and accessible through a centralized web platform.
+
+## ▶️ Run Locally
+
+**Backend**
 ```bash
-npm install        # installs root, server and client packages
-npm run seed       # optional: loads demo data (clears existing data!)
-npm run dev        # server on :5000, client on :5173
+cd server
+npm install
+npm run seed
+npm run dev
 ```
 
-Open http://localhost:5173
-
-## Logins
-
-| Role    | Email                | Password       |
-|---------|----------------------|----------------|
-| Admin   | admin@college.edu    | Admin@123      |
-| Student | student1@college.edu | Password@123   |
-| Company | hr@nimbus.com        | Password@123   |
-
-The admin is created automatically on first server start. Student and company logins exist only after `npm run seed`.
-
-## Flow
-
-1. Company registers and waits as **pending**. Admin approves it, then it can sign in.
-2. Company posts a drive. It is **pending** until the admin approves it, and only then do students see it.
-3. Student completes the profile, uploads a PDF resume and applies. Eligibility (CGPA, department, deadline, resume) is checked on the server.
-4. Company reviews applicants and moves them through shortlisted, interview and selected or rejected. Students see every update on their timeline.
-5. Admin tracks placements in the dashboard and Reports page, and can export placed students as CSV.
-
-## Structure
-
-```
-server/   Express 5 + Mongoose 9 API (JWT, bcrypt, multer)
-  models/ controllers/ routes/ middleware/ utils/ seed.js
-client/   React 18 + Vite + React Router + Recharts, plain CSS
-  src/pages/{student,company,admin}  src/components  src/context
+**Frontend — open a second terminal**
+```bash
+cd client
+npm install
+npm run dev
 ```
 
-## Notes
+Open the local URL displayed by Vite, usually `http://localhost:5173`.
 
-- Resumes are saved in `server/uploads/resumes`.
-- Change `JWT_SECRET` in `server/.env` before deploying anywhere.
-- Never commit `.env` (it is already in `.gitignore`).
+## 📌 Project Status
+
+Academic project — demo placement drives and sample accounts are intended for testing. This application is not connected to verified live company vacancies.
+
+---
+
+<p align="center">
+  <b>Built with 💚 by our three-member team</b><br/>
+  MERN Stack • Learn • Build • Collaborate
+</p>
